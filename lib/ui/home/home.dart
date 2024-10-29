@@ -144,37 +144,144 @@ class Home extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 15),
-          Row(
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                height: 97,
-                width: 89,
-                decoration: BoxDecoration(
-                    color: const Color(0XffFFFFFF),
-                    borderRadius: BorderRadius.circular(12)),
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Container(
-                height: 97,
-                width: 89,
-                decoration: BoxDecoration(
-                    color: const Color(0XffFFFFFF),
-                    borderRadius: BorderRadius.circular(12)),
-              ),
-              Container(
+          Padding(
+            padding: const EdgeInsets.only(left: 35),
+            child: Row(
+              children: [
+                Container(
                   height: 97,
                   width: 89,
                   decoration: BoxDecoration(
                       color: const Color(0XffFFFFFF),
-                      borderRadius: BorderRadius.circular(12),
-                      image: const DecorationImage(
-                          image:
-                              AssetImage('assets/static_assets/facial.png')))),
-            ],
+                      borderRadius: BorderRadius.circular(12)),
+                  child: const Padding(
+                    padding: EdgeInsets.only(
+                      top: 3,
+                      left: 15,
+                      right: 15,
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image(
+                            image:
+                                AssetImage('assets/static_assets/nails.png')),
+                        Text(
+                          'Nails',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0XffE78377)),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 15,
+                ),
+                Container(
+                  height: 97,
+                  width: 89,
+                  decoration: BoxDecoration(
+                      color: const Color(0XffFFFFFF),
+                      borderRadius: BorderRadius.circular(12)),
+                  child: const Padding(
+                    padding: EdgeInsets.only(
+                      top: 3,
+                      left: 15,
+                      right: 15,
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image(
+                            image: AssetImage('assets/static_assets/hiar.png')),
+                        Text(
+                          'Hair',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0XffE78377)),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 15,
+                ),
+                Container(
+                  height: 97,
+                  width: 89,
+                  decoration: BoxDecoration(
+                      color: const Color(0XffFFFFFF),
+                      borderRadius: BorderRadius.circular(12)),
+                  child: const Padding(
+                    padding: EdgeInsets.only(
+                      top: 3,
+                      left: 15,
+                      right: 15,
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image(
+                            image:
+                                AssetImage('assets/static_assets/facial.png')),
+                        Text(
+                          'Facial',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0XffE78377)),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 97,
+                  width: 89,
+                  decoration: BoxDecoration(
+                      color: const Color(0XffFFFFFF),
+                      borderRadius: BorderRadius.circular(12)),
+                  child: const Padding(
+                    padding: EdgeInsets.only(
+                      top: 3,
+                      left: 15,
+                      right: 15,
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image(
+                            image: AssetImage('assets/static_assets/hiar.png')),
+                        Text(
+                          'Hair',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0XffE78377)),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
+          const SizedBox(height: 22),
+          const Padding(
+            padding: EdgeInsets.only(right: 150),
+            child: Text(
+              'Featured Services',
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0Xff000000)),
+            ),
+          )
         ],
       ),
     ));
