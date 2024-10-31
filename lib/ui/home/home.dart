@@ -114,8 +114,9 @@ class Home extends StatelessWidget {
                       ),
                     ),
                     const Padding(
-                      padding: EdgeInsets.only(left: 250, bottom: 200),
+                      padding: EdgeInsets.only(left: 200, bottom: 200),
                       child: Image(
+                          alignment: Alignment.bottomRight,
                           image: AssetImage('assets/static_assets/girl.png')),
                     ),
                   ],
