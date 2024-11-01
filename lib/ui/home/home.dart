@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_listview/custom_widget/reuse_container/reuse_container.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -175,10 +176,16 @@ class Home extends StatelessWidget {
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                           color: Color(0XffE78377)),
-                    )
+                    ),
                   ],
                 ),
-              )
+              ),
+              const ReuseContainer(
+                  text: "Hair", imagepath: "assets/static_assets/hiar.png"),
+              const ReuseContainer(
+                  text: "Facial", imagepath: "assets/static_assets/facial.png"),
+              const ReuseContainer(
+                  text: "Massage", imagepath: "assets/static_assets/masa.png")
             ],
           )
         ],
