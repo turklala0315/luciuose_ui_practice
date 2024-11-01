@@ -93,10 +93,17 @@ class Login extends StatelessWidget {
                 borderRadius: BorderRadius.circular(9)),
             child: TextButton(
               onPressed: () {},
-              child: TextButton(onPressed: () {}, child: const Text("login")),
+              child: TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    "Login",
+                    style: TextStyle(color: Color(0XffFFFFFF)),
+                  )),
             ),
           ),
+
           // button finish
+
           const SizedBox(height: 40),
           Center(
             child: Row(
