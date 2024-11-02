@@ -117,10 +117,15 @@ class Home extends StatelessWidget {
                     ),
                   ),
                 ]),
+                const Align(alignment: Alignment.bottomRight),
                 Padding(
-                  padding: const EdgeInsets.all(15),
+                  padding: const EdgeInsets.only(
+                    left: 20,
+                    top: 50,
+                  ),
                   child: Image.asset(
                     "assets/static_assets/girl.png",
+                    scale: 5,
                   ),
                 ),
               ],
@@ -154,39 +159,97 @@ class Home extends StatelessWidget {
               ),
             ],
           ),
-          Row(
-            children: [
-              Container(
-                height: 97,
-                width: 89,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: const Color(0XffFFFFFF)),
-                child: const Column(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(
-                          bottom: 10, top: 13, right: 26, left: 26),
-                      child: Image(
-                          image: AssetImage('assets/static_assets/nails.png')),
-                    ),
-                    Text(
-                      'Nails',
+          const SizedBox(height: 15),
+          SizedBox(
+            height: 100,
+            child: ListView(
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+              children: const [
+                ReuseContainer(
+                    text: "Nails", imagepath: "assets/static_assets/nails.png"),
+                SizedBox(width: 15),
+                ReuseContainer(
+                    text: "Hiar", imagepath: "assets/static_assets/hiar.png"),
+                SizedBox(width: 15),
+                ReuseContainer(
+                    text: "Facial",
+                    imagepath: "assets/static_assets/facial.png"),
+                SizedBox(width: 15),
+                ReuseContainer(
+                    text: "Massage",
+                    imagepath: "assets/static_assets/masa.png"),
+                SizedBox(width: 15),
+                ReuseContainer(
+                    text: "Waxing",
+                    imagepath: "assets/static_assets/waxing.png"),
+                SizedBox(width: 15),
+                ReuseContainer(
+                    text: "Thread",
+                    imagepath: "assets/static_assets/Threading.png"),
+                SizedBox(width: 15),
+                ReuseContainer(
+                    text: "NUltra",
+                    imagepath: "assets/static_assets/Nultra.png"),
+                SizedBox(width: 15),
+                ReuseContainer(
+                    text: "Cavit",
+                    imagepath: "assets/static_assets/Slim Rf.png")
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+          const Padding(
+            padding: EdgeInsets.only(right: 215),
+            child: Text(
+              "Featured Services",
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0Xff000000)),
+            ),
+          ),
+          const SizedBox(height: 15),
+          Padding(
+            padding: const EdgeInsets.only(right: 105),
+            child: Container(
+              height: 88,
+              width: 267,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(9),
+                  color: const Color(0XffFFFFFF)),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 9, top: 9, bottom: 9),
+                    child: Image(
+                        image: AssetImage("assets/static_assets/classic.png")),
+                  ),
+                  SizedBox(width: 13),
+                  Padding(
+                    padding: EdgeInsets.only(top: 8, right: 20, bottom: 50),
+                    child: Text(
+                      "Classic Pedicure",
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.w500,
                           color: Color(0XffE78377)),
                     ),
-                  ],
-                ),
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        "45 min 59 AED",
+                        style: TextStyle(
+                          fontSize: 13,
+                        ),
+                      )
+                    ],
+                  )
+                ],
               ),
-              const ReuseContainer(
-                  text: "Hair", imagepath: "assets/static_assets/hiar.png"),
-              const ReuseContainer(
-                  text: "Facial", imagepath: "assets/static_assets/facial.png"),
-              const ReuseContainer(
-                  text: "Massage", imagepath: "assets/static_assets/masa.png")
-            ],
+            ),
           )
         ],
       )),
