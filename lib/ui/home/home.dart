@@ -339,9 +339,21 @@ class Home extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
         ],
       )),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   backgroundColor: const Color(0XffFFFFFF),
+      //   showSelectedLabels: false,
+      //   showUnselectedLabels: false,
+      //   // currentIndex: 1,
+      //   items: const [
+      //     BottomNavigationBarItem(icon: Icon(Icons.home), label: null),
+      //     BottomNavigationBarItem(
+      //         icon: Icon(Icons.vertical_align_top_rounded), label: null),
+      //     BottomNavigationBarItem(icon: Icon(Icons.person), label: null),
+      //   ],
+      // ),
     );
   }
 }
