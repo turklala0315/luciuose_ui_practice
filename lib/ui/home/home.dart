@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_listview/custom_widget/feature_container/reuse_feature_container.dart';
+import 'package:flutter_application_listview/custom_widget/reuse_classic_container/reuse_classic_conainer.dart';
 import 'package:flutter_application_listview/custom_widget/reuse_container/reuse_container.dart';
 
 class Home extends StatelessWidget {
@@ -12,14 +13,17 @@ class Home extends StatelessWidget {
           child: Column(
         children: [
           const SizedBox(
-            height: 50,
+            height: 20,
           ),
-          const Text(
-            'Good morning',
-            style: TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w200,
-                color: Color(0Xff000000)),
+          const Padding(
+            padding: EdgeInsets.only(right: 245),
+            child: Text(
+              'Good morning',
+              style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w200,
+                  color: Color(0Xff000000)),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 25),
@@ -50,7 +54,7 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           const Padding(
             padding: EdgeInsets.only(right: 190),
             child: Text(
@@ -132,7 +136,7 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           const Row(
             children: [
               Padding(
@@ -199,7 +203,7 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           const Padding(
             padding: EdgeInsets.only(right: 215),
             child: Text(
@@ -210,7 +214,7 @@ class Home extends StatelessWidget {
                   color: Color(0Xff000000)),
             ),
           ),
-          const SizedBox(height: 15),
+          const SizedBox(height: 10),
           SizedBox(
             height: 100,
             child: ListView(
@@ -222,15 +226,15 @@ class Home extends StatelessWidget {
                   child: Row(
                     children: [
                       ReuseFeatureContainer(
-                          belowtext: "Classic Pedicure",
+                          firsttext: "Classic Pedicure",
                           imagepath: "assets/static_assets/classic.png"),
                       SizedBox(width: 15),
                       ReuseFeatureContainer(
-                          belowtext: "Classic Pedicure",
+                          firsttext: "Classic Pedicure",
                           imagepath: "assets/static_assets/classic.png"),
                       SizedBox(width: 15),
                       ReuseFeatureContainer(
-                          belowtext: "Classic Pedicure",
+                          firsttext: "Classic Pedicure",
                           imagepath: "assets/static_assets/classic.png")
                     ],
                   ),
@@ -238,7 +242,7 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           const Row(
             children: [
               Text(
@@ -263,6 +267,78 @@ class Home extends StatelessWidget {
                 color: Color(0Xff888888),
               )
             ],
+          ),
+          SizedBox(
+            height: 100,
+            child: ListView(
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+              children: [
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Container(
+                        height: 71,
+                        width: 230,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(6),
+                            color: const Color(0XffFFFFFF),
+                            image: const DecorationImage(
+                                alignment: Alignment.centerLeft,
+                                image: AssetImage(
+                                    "assets/static_assets/upcoming pic.png"),
+                                scale: 4)),
+                        child: const Column(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(left: 60),
+                              child: Text("Classic Manicure",
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500,
+                                      color: Color(0Xff000000))),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(right: 35),
+                              child: Text(
+                                "Home",
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color(0XffE78377)),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 60),
+                              child: Text(
+                                "Sat, 22 August 2022",
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color(0Xff888888)),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 15),
+                    const ReuseClassicConainer(
+                        firsttext: "Clsssic Manicure",
+                        midtext: "Home",
+                        lasttext: "Sat, 22 August 2022",
+                        imagepath: "assets/static_assets/classic.png"),
+                    const SizedBox(width: 15),
+                    const ReuseClassicConainer(
+                        firsttext: "Clsssic Manicure",
+                        midtext: "Home",
+                        lasttext: "Sat, 22 August 2022",
+                        imagepath: "assets/static_assets/classic.png")
+                  ],
+                ),
+              ],
+            ),
           )
         ],
       )),
