@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_listview/custom_widget/feature_container/reuse_feature_container.dart';
 import 'package:flutter_application_listview/custom_widget/reuse_container/reuse_container.dart';
 
 class Home extends StatelessWidget {
@@ -210,46 +211,58 @@ class Home extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 15),
-          Padding(
-            padding: const EdgeInsets.only(right: 105),
-            child: Container(
-              height: 88,
-              width: 267,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(9),
-                  color: const Color(0XffFFFFFF)),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 9, top: 9, bottom: 9),
-                    child: Image(
-                        image: AssetImage("assets/static_assets/classic.png")),
-                  ),
-                  SizedBox(width: 13),
-                  Padding(
-                    padding: EdgeInsets.only(top: 8, right: 20, bottom: 50),
-                    child: Text(
-                      "Classic Pedicure",
-                      style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w500,
-                          color: Color(0XffE78377)),
-                    ),
-                  ),
-                  Row(
+          SizedBox(
+            height: 100,
+            child: ListView(
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+              children: const [
+                Padding(
+                  padding: EdgeInsets.only(right: 100),
+                  child: Row(
                     children: [
-                      Text(
-                        "45 min 59 AED",
-                        style: TextStyle(
-                          fontSize: 13,
-                        ),
-                      )
+                      ReuseFeatureContainer(
+                          belowtext: "Classic Pedicure",
+                          imagepath: "assets/static_assets/classic.png"),
+                      SizedBox(width: 15),
+                      ReuseFeatureContainer(
+                          belowtext: "Classic Pedicure",
+                          imagepath: "assets/static_assets/classic.png"),
+                      SizedBox(width: 15),
+                      ReuseFeatureContainer(
+                          belowtext: "Classic Pedicure",
+                          imagepath: "assets/static_assets/classic.png")
                     ],
-                  )
-                ],
-              ),
+                  ),
+                ),
+              ],
             ),
+          ),
+          const SizedBox(height: 20),
+          const Row(
+            children: [
+              Text(
+                "Upcoming Bookings",
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0Xff000000)),
+              ),
+              SizedBox(width: 95),
+              Text(
+                "All Bookings",
+                style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                    color: Color(0Xff888888)),
+              ),
+              SizedBox(width: 5),
+              Icon(
+                Icons.arrow_forward,
+                size: 15,
+                color: Color(0Xff888888),
+              )
+            ],
           )
         ],
       )),
